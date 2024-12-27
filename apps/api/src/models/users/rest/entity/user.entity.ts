@@ -9,4 +9,6 @@ export class UserEntity implements RestrictProperties<UserEntity, User> {
 
   @IsOptional()
   name: string;
+  @IsOptional()
+  image: string;
 }

@@ -47,7 +47,7 @@ export class AuthGuard implements CanActivate {
       if (!user) {
         throw new UnauthorizedException('No user present with the uid.');
       }
-      
+
       req.user = payload;
     } catch (err) {
       console.error('Token validation error:', err);
