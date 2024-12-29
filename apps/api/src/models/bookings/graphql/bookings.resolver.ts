@@ -1,4 +1,11 @@
-import { Resolver, Query, Mutation, Args, ResolveField, Parent } from '@nestjs/graphql';
+import {
+  Resolver,
+  Query,
+  Mutation,
+  Args,
+  ResolveField,
+  Parent,
+} from '@nestjs/graphql';
 import { BookingsService } from './bookings.service';
 import { Booking } from './entity/booking.entity';
 import { FindManyBookingArgs, FindUniqueBookingArgs } from './dtos/find.args';

@@ -1,7 +1,9 @@
 {
   "name": "@autospace/web",
   "version": "0.1.0",
+  "author": "Soumo Sarkar",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "next dev -p 3001",
     "build": "next build",
@@ -10,6 +12,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@autospace/network": "*",
     "@autospace/sample-lib": "*",
     "next": "15.1.2",
     "react": "^19.0.0",

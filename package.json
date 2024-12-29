@@ -1,8 +1,10 @@
 {
   "name": "autospace",
   "version": "1.0.0",
-  "description": "",
+  "description": "Parking Management System monorepo",
+  "author": "Soumo Sarkar",
   "private": true,
+  "license": "MIT",
   "workspaces": {
     "packages": [
       "apps/*",
@@ -25,8 +27,6 @@
     "cloc": "npx cloc --exclude-dir=node_modules,dist,build,yarn.lock,package.json,generated.tsx,.next,.nx ."
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "prettier": "^3.0.0",
     "typescript": "^5.7.2",

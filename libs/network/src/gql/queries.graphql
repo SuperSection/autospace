@@ -1,0 +1,44 @@
+mutation RegisterWithCredentials(
+  $registerWithCredentialsInput: RegisterWithCredentialsInput!
+) {
+  registerWithCredentials(
+    registerWithCredentialsInput: $registerWithCredentialsInput
+  ) {
+    updatedAt
+    uid
+    name
+    image
+    createdAt
+  }
+}
+
+query Companies(
+  $distinct: [CompanyScalarFieldEnum!]
+  $orderBy: [CompanyOrderByWithRelationInput!]
+  $where: CompanyWhereInput
+  $cursor: CompanyWhereUniqueInput
+  $take: Int
+  $skip: Int
+) {
+  companies(
+    distinct: $distinct
+    where: $where
+    orderBy: $orderBy
+    cursor: $cursor
+    take: $take
+    skip: $skip
+  ) {
+    createdAt
+    description
+    displayName
+    id
+    updatedAt
+    managers {
+      uid
+      displayName
+    }
+    garages {
+      id
+    }
+  }
+}

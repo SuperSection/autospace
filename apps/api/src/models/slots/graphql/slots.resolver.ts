@@ -1,4 +1,11 @@
-import { Resolver, Query, Mutation, Args, ResolveField, Parent } from '@nestjs/graphql';
+import {
+  Resolver,
+  Query,
+  Mutation,
+  Args,
+  ResolveField,
+  Parent,
+} from '@nestjs/graphql';
 import { SlotsService } from './slots.service';
 import { Slot } from './entity/slot.entity';
 import { FindManySlotArgs, FindUniqueSlotArgs } from './dtos/find.args';

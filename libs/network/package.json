@@ -1,0 +1,25 @@
+{
+  "name": "@autospace/network",
+  "version": "1.0.0",
+  "description": "A bridge between GraphQL and Frontend for making Typesafe queries & mutations",
+  "author": "Soumo Sarkar",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "tsc": "tsc --noEmit",
+    "codegen": "graphql-codegen --config codegen.ts"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.3",
+    "@graphql-codegen/named-operations-object": "^3.1.0",
+    "@graphql-codegen/typed-document-node": "^5.0.12",
+    "@parcel/watcher": "^2.5.0"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.12.4"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0"
+  }
+}
