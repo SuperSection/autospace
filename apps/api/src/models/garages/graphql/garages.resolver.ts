@@ -1,4 +1,11 @@
-import { Resolver, Query, Mutation, Args } from '@nestjs/graphql';
+import {
+  Resolver,
+  Query,
+  Mutation,
+  Args,
+  ResolveField,
+  Parent,
+} from '@nestjs/graphql';
 import { GetUserType } from 'src/common/types';
 import { Garage } from './entity/garage.entity';
 import { GaragesService } from './garages.service';
@@ -9,6 +16,10 @@ import { checkRowLevelPermission } from 'src/common/auth/util';
 import { AllowAuthenticated, GetUser } from 'src/common/auth/auth.decorator';
 import { PrismaService } from 'src/common/prisma/prisma.service';
 import { BadRequestException } from '@nestjs/common';
+import { Verification } from 'src/models/verifications/graphql/entity/verification.entity';
+import { Company } from 'src/models/companies/graphql/entity/company.entity';
+import { Address } from 'src/models/addresses/graphql/entity/address.entity';
+import { Slot } from 'src/models/slots/graphql/entity/slot.entity';
 
 @Resolver(() => Garage)
 export class GaragesResolver {
@@ -76,5 +87,27 @@ export class GaragesResolver {
       garage.Company.Managers.map((man) => man.uid),
     );
     return this.garagesService.remove(args);
+  }
+
+  @ResolveField(() => Verification, { nullable: true })
+  async verification(@Parent() parent: Garage) {
+    return this.prisma.verification.findUnique({
+      where: { garageId: parent.id },
+    });
+  }
+
+  @ResolveField(() => Company)
+  company(@Parent() garage: Garage) {
+    return this.prisma.company.findFirst({ where: { id: garage.companyId } });
+  }
+
+  @ResolveField(() => Address, { nullable: true })
+  address(@Parent() garage: Garage) {
+    return this.prisma.address.findFirst({ where: { garageId: garage.id } });
+  }
+
+  @ResolveField(() => [Slot])
+  slots(@Parent() garage: Garage) {
+    return this.prisma.slot.findMany({ where: { garageId: garage.id } });
   }
 }
