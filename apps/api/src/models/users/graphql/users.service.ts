@@ -23,10 +23,24 @@ export class UsersService {
     private readonly prisma: PrismaService,
     private readonly jwtService: JwtService,
   ) {}
+  registerWithProvider({ image, name, uid, type }: RegisterWithProviderInput) {
+    return this.prisma.user.create({
+      data: {
+        uid,
+        name,
+        image,
+        AuthProvider: {
+          create: {
+            type,
+          },
+        },
+      },
+    });
+  }
 
   async registerWithCredentials({
-    name,
     email,
+    name,
     password,
     image,
   }: RegisterWithCredentialsInput) {
@@ -39,7 +53,7 @@ export class UsersService {
     }
 
     // Hash the password
-    const salt = bcrypt.genSaltSync(10);
+    const salt = bcrypt.genSaltSync();
     const passwordHash = bcrypt.hashSync(password, salt);
 
     const uid = uuid();
@@ -61,20 +75,8 @@ export class UsersService {
           },
         },
       },
-    });
-  }
-
-  registerWithProvider({ name, image, uid, type }: RegisterWithProviderInput) {
-    return this.prisma.user.create({
-      data: {
-        uid,
-        name,
-        image,
-        AuthProvider: {
-          create: {
-            type,
-          },
-        },
+      include: {
+        Credentials: true,
       },
     });
   }
@@ -104,10 +106,12 @@ export class UsersService {
 
     const jwtToken = this.jwtService.sign(
       { uid: user.uid },
-      { algorithm: 'HS256' },
+      {
+        algorithm: 'HS256',
+      },
     );
 
-    return { token: jwtToken };
+    return { token: jwtToken, user };
   }
 
   findAll(args: FindManyUserArgs) {

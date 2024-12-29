@@ -82,7 +82,7 @@ model Manager {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  diplayName String?
+  displayName String?
 
   companyId       Int?              @unique
   Company         Company?          @relation(fields: [companyId], references: [id])

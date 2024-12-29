@@ -22,15 +22,16 @@ export class UsersResolver {
   ) {}
 
   @Mutation(() => User)
-  async createUserWithCredentials(
-    @Args('createUserWithCredentialsInput') args: RegisterWithCredentialsInput,
+  async registerWithCredentials(
+    @Args('registerWithCredentialsInput')
+    args: RegisterWithCredentialsInput,
   ) {
     return this.usersService.registerWithCredentials(args);
   }
 
   @Mutation(() => User)
-  async createUserWithProvider(
-    @Args('createUserWithProviderInput') args: RegisterWithProviderInput,
+  async registerWithProvider(
+    @Args('registerWithProviderInput') args: RegisterWithProviderInput,
   ) {
     return this.usersService.registerWithProvider(args);
   }
@@ -46,7 +47,6 @@ export class UsersResolver {
     return this.usersService.findOne({ where: { uid: user.uid } });
   }
 
-  @AllowAuthenticated()
   @Query(() => [User], { name: 'users' })
   findAll(@Args() args: FindManyUserArgs) {
     return this.usersService.findAll(args);
