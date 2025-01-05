@@ -18,7 +18,7 @@ const secureCookies = process.env.AUTH_URL?.startsWith('https://');
 const hostName = new URL(process.env.AUTH_URL || '').hostname;
 const rootDomain = 'supersection.com';
 
-export const authOptions: NextAuthConfig = {
+export const authConfig: NextAuthConfig = {
   providers: [
     GoogleProvider({
       clientId: process.env.AUTH_GOOGLE_ID!,

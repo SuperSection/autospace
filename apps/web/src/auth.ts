@@ -1,4 +1,4 @@
 import NextAuth from 'next-auth';
-import { authOptions } from '@autospace/network/src/config/authOptions';
+import { authConfig } from '@autospace/network/src/config/authConfig';
 
-export const { handlers, signIn, signOut, auth } = NextAuth(authOptions);
+export const { handlers, signIn, signOut, auth } = NextAuth(authConfig);

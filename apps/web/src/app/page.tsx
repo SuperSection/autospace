@@ -1,5 +1,5 @@
 import { add } from '@autospace/sample-lib';
 
 export default function Home() {
-  return <main>Love you Shona {add(5, 10)}</main>;
+  return <main className="bg-primary">Autospace {add(2000, 25)}</main>;
 }
