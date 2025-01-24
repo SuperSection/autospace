@@ -21,7 +21,7 @@ import {
 } from '@nestjs/swagger';
 import { BookingEntity } from './entity/booking.entity';
 import { AllowAuthenticated, GetUser } from 'src/common/auth/auth.decorator';
-import { GetUserType } from 'src/common/types';
+import { GetUserType } from '@autospace/utils/types';
 import { checkRowLevelPermission } from 'src/common/auth/util';
 
 @ApiTags('bookings')

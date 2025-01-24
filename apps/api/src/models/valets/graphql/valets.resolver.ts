@@ -5,7 +5,7 @@ import { FindManyValetArgs, FindUniqueValetArgs } from './dtos/find.args';
 import { CreateValetInput } from './dtos/create-valet.input';
 import { UpdateValetInput } from './dtos/update-valet.input';
 import { checkRowLevelPermission } from 'src/common/auth/util';
-import { GetUserType } from 'src/common/types';
+import { GetUserType } from '@autospace/utils/types';
 import { AllowAuthenticated, GetUser } from 'src/common/auth/auth.decorator';
 import { PrismaService } from 'src/common/prisma/prisma.service';
 

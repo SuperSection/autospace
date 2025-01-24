@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A bridge between GraphQL and Frontend for making Typesafe queries & mutations",
   "author": "Soumo Sarkar",
+  "private": true,
   "license": "MIT",
   "main": "index.js",
   "scripts": {

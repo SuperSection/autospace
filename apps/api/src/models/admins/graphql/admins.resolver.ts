@@ -8,7 +8,7 @@ import {
 } from '@nestjs/graphql';
 import { AdminsService } from './admins.service';
 import { Admin } from './entity/admin.entity';
-import { GetUserType } from 'src/common/types';
+import { GetUserType } from '@autospace/utils/types';
 import { FindManyAdminArgs, FindUniqueAdminArgs } from './dtos/find.args';
 import { CreateAdminInput } from './dtos/create-admin.input';
 import { UpdateAdminInput } from './dtos/update-admin.input';

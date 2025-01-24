@@ -19,7 +19,7 @@ import {
   ApiCreatedResponse,
   ApiOkResponse,
 } from '@nestjs/swagger';
-import { GetUserType } from 'src/common/types';
+import { GetUserType } from '@autospace/utils/types';
 import { ReviewEntity } from './entity/review.entity';
 import { AllowAuthenticated, GetUser } from 'src/common/auth/auth.decorator';
 import { checkRowLevelPermission } from 'src/common/auth/util';

@@ -1,5 +1,5 @@
 import { Resolver, Query, Mutation, Args } from '@nestjs/graphql';
-import { GetUserType } from 'src/common/types';
+import { GetUserType } from '@autospace/utils/types';
 import { Review } from './entity/review.entity';
 import { ReviewsService } from './reviews.service';
 import { FindManyReviewArgs, FindUniqueReviewArgs } from './dtos/find.args';

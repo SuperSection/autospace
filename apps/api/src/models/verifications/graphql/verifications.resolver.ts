@@ -7,7 +7,7 @@ import {
 } from './dtos/find.args';
 import { CreateVerificationInput } from './dtos/create-verification.input';
 import { UpdateVerificationInput } from './dtos/update-verification.input';
-import { GetUserType } from 'src/common/types';
+import { GetUserType } from '@autospace/utils/types';
 import { AllowAuthenticated, GetUser } from 'src/common/auth/auth.decorator';
 
 @Resolver(() => Verification)

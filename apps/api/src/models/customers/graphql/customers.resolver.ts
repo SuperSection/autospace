@@ -12,7 +12,7 @@ import { FindManyCustomerArgs, FindUniqueCustomerArgs } from './dtos/find.args';
 import { CreateCustomerInput } from './dtos/create-customer.input';
 import { UpdateCustomerInput } from './dtos/update-customer.input';
 import { checkRowLevelPermission } from 'src/common/auth/util';
-import { GetUserType } from 'src/common/types';
+import { GetUserType } from '@autospace/utils/types';
 import { AllowAuthenticated, GetUser } from 'src/common/auth/auth.decorator';
 import { PrismaService } from 'src/common/prisma/prisma.service';
 import { User } from 'src/models/users/graphql/entity/user.entity';

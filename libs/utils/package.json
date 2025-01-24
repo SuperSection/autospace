@@ -1,0 +1,8 @@
+{
+  "name": "@autospace/utils",
+  "version": "1.0.0",
+  "description": "Utils for the monorepo",
+  "author": "Soumo Sarkar",
+  "private": true,
+  "license": "MIT"
+}

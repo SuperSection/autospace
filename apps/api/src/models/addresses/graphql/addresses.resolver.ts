@@ -6,7 +6,7 @@ import {
   ResolveField,
   Parent,
 } from '@nestjs/graphql';
-import { GetUserType } from 'src/common/types';
+import { GetUserType } from '@autospace/utils/types';
 import { Address } from './entity/address.entity';
 import { AddressesService } from './addresses.service';
 import { FindManyAddressArgs, FindUniqueAddressArgs } from './dtos/find.args';

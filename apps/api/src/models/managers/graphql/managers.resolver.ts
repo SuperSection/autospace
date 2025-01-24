@@ -12,7 +12,7 @@ import { FindManyManagerArgs, FindUniqueManagerArgs } from './dtos/find.args';
 import { CreateManagerInput } from './dtos/create-manager.input';
 import { UpdateManagerInput } from './dtos/update-manager.input';
 import { checkRowLevelPermission } from 'src/common/auth/util';
-import { GetUserType } from 'src/common/types';
+import { GetUserType } from '@autospace/utils/types';
 import { AllowAuthenticated, GetUser } from 'src/common/auth/auth.decorator';
 import { PrismaService } from 'src/common/prisma/prisma.service';
 import { Company } from 'src/models/companies/graphql/entity/company.entity';

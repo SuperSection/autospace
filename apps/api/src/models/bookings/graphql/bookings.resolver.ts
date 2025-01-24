@@ -12,7 +12,7 @@ import { FindManyBookingArgs, FindUniqueBookingArgs } from './dtos/find.args';
 import { CreateBookingInput } from './dtos/create-booking.input';
 import { UpdateBookingInput } from './dtos/update-booking.input';
 import { checkRowLevelPermission } from 'src/common/auth/util';
-import { GetUserType } from 'src/common/types';
+import { GetUserType } from '@autospace/utils/types';
 import { AllowAuthenticated, GetUser } from 'src/common/auth/auth.decorator';
 import { PrismaService } from 'src/common/prisma/prisma.service';
 import { Customer } from 'src/models/customers/graphql/entity/customer.entity';

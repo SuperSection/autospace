@@ -15,7 +15,7 @@ import {
 import { CreateValetAssignmentInput } from './dtos/create-valet-assignment.input';
 import { UpdateValetAssignmentInput } from './dtos/update-valet-assignment.input';
 import { checkRowLevelPermission } from 'src/common/auth/util';
-import { GetUserType } from 'src/common/types';
+import { GetUserType } from '@autospace/utils/types';
 import { AllowAuthenticated, GetUser } from 'src/common/auth/auth.decorator';
 import { PrismaService } from 'src/common/prisma/prisma.service';
 import { Valet } from 'src/models/valets/graphql/entity/valet.entity';

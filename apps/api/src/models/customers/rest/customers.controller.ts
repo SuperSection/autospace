@@ -21,7 +21,7 @@ import {
 } from '@nestjs/swagger';
 import { CustomerEntity } from './entity/customer.entity';
 import { AllowAuthenticated, GetUser } from 'src/common/auth/auth.decorator';
-import { GetUserType } from 'src/common/types';
+import { GetUserType } from '@autospace/utils/types';
 import { checkRowLevelPermission } from 'src/common/auth/util';
 
 @ApiTags('customers')

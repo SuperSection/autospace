@@ -48,7 +48,7 @@ mutation Login($loginInput: LoginInput!) {
     token,
     user {
       uid
-      name,
+      name
       image
     }
   }

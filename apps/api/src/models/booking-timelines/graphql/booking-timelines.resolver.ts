@@ -8,7 +8,7 @@ import {
 import { CreateBookingTimelineInput } from './dtos/create-booking-timeline.input';
 import { UpdateBookingTimelineInput } from './dtos/update-booking-timeline.input';
 import { checkRowLevelPermission } from 'src/common/auth/util';
-import { GetUserType } from 'src/common/types';
+import { GetUserType } from '@autospace/utils/types';
 import { AllowAuthenticated, GetUser } from 'src/common/auth/auth.decorator';
 import { PrismaService } from 'src/common/prisma/prisma.service';
 

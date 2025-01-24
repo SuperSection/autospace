@@ -1,0 +1,14 @@
+{
+  "name": "@autospace/forms",
+  "version": "1.0.0",
+  "description": "Forms library for the monorepo",
+  "author": "Soumo Sarkar",
+  "private": true,
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@hookform/resolvers": "^3.9.1",
+    "react-hook-form": "^7.54.2",
+    "zod": "^3.24.1"
+  }
+}

@@ -6,7 +6,7 @@ import {
   ResolveField,
   Parent,
 } from '@nestjs/graphql';
-import { GetUserType } from 'src/common/types';
+import { GetUserType } from '@autospace/utils/types';
 import { Company } from './entity/company.entity';
 import { CompaniesService } from './companies.service';
 import { FindManyCompanyArgs, FindUniqueCompanyArgs } from './dtos/find.args';
@@ -35,11 +35,13 @@ export class CompaniesResolver {
     return this.companiesService.create(args);
   }
 
+  @AllowAuthenticated()
   @Query(() => [Company], { name: 'companies' })
   findAll(@Args() args: FindManyCompanyArgs) {
     return this.companiesService.findAll(args);
   }
 
+  @AllowAuthenticated()
   @Query(() => Company, { name: 'company' })
   findOne(@Args() args: FindUniqueCompanyArgs) {
     return this.companiesService.findOne(args);

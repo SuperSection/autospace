@@ -12,7 +12,7 @@ import { FindManySlotArgs, FindUniqueSlotArgs } from './dtos/find.args';
 import { CreateSlotInput } from './dtos/create-slot.input';
 import { UpdateSlotInput } from './dtos/update-slot.input';
 import { checkRowLevelPermission } from 'src/common/auth/util';
-import { GetUserType } from 'src/common/types';
+import { GetUserType } from '@autospace/utils/types';
 import { AllowAuthenticated, GetUser } from 'src/common/auth/auth.decorator';
 import { PrismaService } from 'src/common/prisma/prisma.service';
 import { Garage } from 'src/models/garages/graphql/entity/garage.entity';

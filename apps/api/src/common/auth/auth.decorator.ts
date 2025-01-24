@@ -5,7 +5,7 @@ import {
   createParamDecorator,
   ExecutionContext,
 } from '@nestjs/common';
-import { Role } from 'src/common/types';
+import { Role } from '@autospace/utils/types';
 
 import { AuthGuard } from './auth.guard';
 import { GqlExecutionContext } from '@nestjs/graphql';

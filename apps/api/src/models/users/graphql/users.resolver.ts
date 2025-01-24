@@ -17,7 +17,7 @@ import {
 } from './dtos/create-user.input';
 import { UpdateUserInput } from './dtos/update-user.input';
 import { checkRowLevelPermission } from 'src/common/auth/util';
-import { GetUserType } from 'src/common/types';
+import { GetUserType } from '@autospace/utils/types';
 import { AllowAuthenticated, GetUser } from 'src/common/auth/auth.decorator';
 import { PrismaService } from 'src/common/prisma/prisma.service';
 import { Admin } from 'src/models/admins/graphql/entity/admin.entity';

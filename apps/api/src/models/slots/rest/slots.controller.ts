@@ -22,7 +22,7 @@ import {
 import { SlotEntity } from './entity/slot.entity';
 import { AllowAuthenticated, GetUser } from 'src/common/auth/auth.decorator';
 import { checkRowLevelPermission } from 'src/common/auth/util';
-import { GetUserType } from 'src/common/types';
+import { GetUserType } from '@autospace/utils/types';
 
 @ApiTags('slots')
 @Controller('slots')
